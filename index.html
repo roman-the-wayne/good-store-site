@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Store | Премиальные кроссовки в Беларуси</title>
+    <meta
+      name="description"
+      content="Магазин кроссовок Good Store. Минск, Барановичи. Лимитированные релизы и классика."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                white: "#FAFAFA",
+                marble: "#F5F5F0",
+                wood: "#C4A484",
+                woodDark: "#8B5A2B",
+                dark: "#1C1917",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            keyframes: {
+              pulseDark: {
+                "0%, 100%": { backgroundColor: "#C4A484" },
+                "50%": { backgroundColor: "#8B5A2B" },
+              },
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "pulse-dark": "pulseDark 3s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fafafa;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e5e5e5;
+        border-radius: 4px;
+      }
+      [x-cloak] {
+        display: none !important;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-brand-white text-stone-800 font-sans antialiased overflow-x-hidden"
+    x-data="{ open: false, imgSrc: '' }"
+  >
+    <nav
+      class="fixed w-full z-40 top-0 bg-white/90 backdrop-blur-md border-b border-stone-100 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 flex items-center">
+            <span
+              class="font-serif text-2xl font-bold tracking-tight text-brand-dark"
+              >good store.</span
+            >
+          </div>
+          <div class="flex items-center">
+            <a
+              href="https://ig.me/m/goodstore_username"
+              class="bg-brand-dark text-white px-5 py-2 rounded-xl text-sm font-medium hover:bg-stone-700 transition shadow-lg shadow-stone-200"
+            >
+              Связаться
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1556906781-9a412961d28c?q=80&w=2070&auto=format&fit=crop"
+          alt="Premium Sneakers"
+          class="w-full h-full object-cover object-center brightness-[0.85]"
+        />
+      </div>
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+        <h1
+          class="font-serif text-4xl md:text-6xl lg:text-7xl text-black font-bold leading-tight mb-6 animate__animated animate__fadeInUp"
+        >
+          Твои любимые модели <br />
+          <span class="text-brand-wood italic">в наличии.</span>
+        </h1>
+        <h2
+          class="text-black text-lg md:text-xl mb-10 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s"
+        >
+          Подберем пару за 5 минут в Instagram.
+        </h2>
+        <div class="animate__animated animate__fadeInUp animate__delay-2s">
+          <a
+            href="https://ig.me/m/goodstore_username"
+            class="inline-flex items-center gap-2 bg-brand-wood hover:bg-brand-woodDark text-white text-lg font-semibold px-8 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-orange-900/20 transform hover:-translate-y-1 animate-pulse-dark"
+          >
+            <i class="ph ph-instagram-logo text-2xl"></i>
+            Написать в Директ
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-brand-wood font-serif italic text-xl"
+            >Selection Strategy</span
+          >
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2">
+            Качество, которое говорит само за себя.
+          </h2>
+          <p class="text-stone-500 mt-4">Внимание к каждой детали.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <template x-for="i in [1, 2, 3]" :key="i">
+            <div
+              class="group cursor-pointer relative overflow-hidden rounded-2xl aspect-[4/5] bg-brand-dark flex items-center justify-center border border-stone-800 transition-all duration-300 hover:border-brand-wood"
+              @click="open = true; imgSrc = 'ссылка_на_заглушку_если_нужна'"
+            >
+              <div class="text-center">
+                <i
+                  class="ph ph-sneaker text-stone-700 text-4xl mb-2 block group-hover:text-brand-wood transition-colors"
+                ></i>
+                <span
+                  class="text-stone-600 text-xs tracking-[0.2em] uppercase font-medium group-hover:text-stone-400"
+                >
+                  In Stock
+                </span>
+              </div>
+
+              <div
+                class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+              ></div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-marble">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mb-6 text-brand-dark"
+            >
+              <i class="ph ph-sneaker text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Большой выбор</h3>
+            <p class="text-stone-500 text-sm">
+              Самые актуальные модели и расцветки всегда в доступе.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mb-6 text-brand-dark"
+            >
+              <i class="ph ph-rocket-launch text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Самовывоз</h3>
+            <p class="text-stone-500 text-sm">
+              Много оффлайн-точек по Минску. Можно примерить и пощупать.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mb-6 text-brand-dark"
+            >
+              <i class="ph ph-camera text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Живые фото</h3>
+            <p class="text-stone-500 text-sm">
+              Реальные фото любой пары по запросу перед покупкой.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mb-6 text-brand-dark"
+            >
+              <i class="ph ph-tag text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Честная цена</h3>
+            <p class="text-stone-500 text-sm">
+              Лучшее соотношение цены и качества на рынке.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-brand-dark">Нам доверяют</h2>
+          <p class="text-stone-500 mt-2">
+            Присоединяйся к множеству довольных клиентов
+          </p>
+        </div>
+        <div
+          class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto pb-6 snap-x"
+        >
+          <div
+            class="snap-center shrink-0 w-80 md:w-auto bg-brand-dark aspect-[9/16] rounded-2xl flex items-center justify-center"
+          >
+            <span class="text-stone-500 uppercase text-xs">Отзыв 1</span>
+          </div>
+          <div
+            class="snap-center shrink-0 w-80 md:w-auto bg-brand-dark aspect-[9/16] rounded-2xl flex items-center justify-center"
+          >
+            <span class="text-stone-500 uppercase text-xs">Фото на ногах</span>
+          </div>
+          <div
+            class="snap-center shrink-0 w-80 md:w-auto bg-brand-dark aspect-[9/16] rounded-2xl flex items-center justify-center"
+          >
+            <span class="text-stone-500 uppercase text-xs">Переписка</span>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center text-brand-dark font-medium hover:text-brand-wood transition border-b border-brand-dark hover:border-brand-wood pb-1"
+          >
+            Посмотреть отзывы в Stories <i class="ph ph-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-marble">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">Как заказать?</h2>
+        <div
+          class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-stone-300"
+        >
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-wood text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"
+            >
+              1
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm"
+            >
+              <h3 class="font-bold text-lg">Выбор</h3>
+              <p class="text-stone-500 text-sm">
+                Выбираешь модель в магазине или присылаешь фото нам в Direct.
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-wood text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"
+            >
+              2
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm"
+            >
+              <h3 class="font-bold text-lg">Консультация</h3>
+              <p class="text-stone-500 text-sm">
+                Помогаем с размером и фиксируем стоимость.
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-wood text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"
+            >
+              3
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm"
+            >
+              <h3 class="font-bold text-lg">Носка</h3>
+              <p class="text-stone-500 text-sm">
+                С удовольствием носите пару каждый день.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      x-show="open"
+      x-cloak
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+      @keydown.escape.window="open = false"
+    >
+      <button
+        @click="open = false"
+        class="absolute top-6 right-6 text-white hover:text-brand-wood transition"
+      >
+        <i class="ph ph-x text-4xl"></i>
+      </button>
+      <img
+        :src="imgSrc"
+        class="max-h-[90vh] max-w-full rounded-lg shadow-2xl"
+        @click.outside="open = false"
+      />
+    </div>
+
+    <footer class="bg-brand-dark text-stone-400 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12"
+        >
+          <div>
+            <span class="font-serif text-3xl font-bold text-white block mb-6"
+              >good store.</span
+            >
+            <a
+              href="https://ig.me/m/goodstore_username"
+              class="inline-block bg-brand-wood text-white px-6 py-3 rounded-xl hover:bg-brand-woodDark transition font-medium"
+              >Instagram</a
+            >
+          </div>
+          <div>
+            <h3
+              class="text-white font-bold mb-4 uppercase tracking-wider text-sm"
+            >
+              Магазины
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>Минск: ТЦ Караван, Тивали, OUTLETO, АЛМИ</li>
+              <li>Барановичи: ул. Ленина 1</li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-white font-bold mb-4 uppercase tracking-wider text-sm"
+            >
+              Информация
+            </h3>
+            <p class="text-xs">© 2024 Good Store. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add(
+                  "animate__animated",
+                  "animate__fadeInUp",
+                );
+                entry.target.classList.remove("opacity-0");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        document
+          .querySelectorAll("section h2, section .grid > div")
+          .forEach((el) => {
+            el.classList.add("opacity-0");
+            observer.observe(el);
+          });
+      });
+    </script>
+  </body>
+</html>
